@@ -33,8 +33,9 @@ public class DataPersist {
 				}
 			}
 			dataInsert.executeBatch();
+			conn.commit();
 		} catch (Exception ex) {
-            System.out.println(ex.getMessage());
+			System.out.println(ex.getMessage());
 		}
 		return "";
 	}
